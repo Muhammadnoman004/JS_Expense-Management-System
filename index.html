@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body{
+            background-color: rgba(167, 166, 166, 0.199);
+        }
+        .heading{
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            color: rgba(7, 7, 104, 0.808);
+            text-shadow: 1px 1px 2px black;
+        }
+        .logout{
+            position: absolute;
+            right: 4%;
+        }
+        tr{
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="main2">
+    <div class="container">
+    <h1 class="text-center my-4  hd heading animate__animated animate__backInLeft">Expense Management System</h1>
+
+    <div class="row justify-content-center mb-4 ">
+        <div class="col-md-3 ">
+            <input type="text" id="expense-title" class="form-control mb-2" placeholder="Title" />
+        </div>
+        <div class="col-md-3 ">
+            <input type="number" id="expense-amount" class="form-control mb-2" placeholder="Amount" />
+        </div>
+        <div class="col-md-3 ">
+            <input type="date" id="expense-date" class="form-control mb-2" />
+        </div>
+        <div class="col-md-3   ">
+            <div class="d-flex justify-content-between">
+                <button onclick="addExpense()" class="btn btn-warning">Add </button>
+                <button onclick="deleteAll()" class="btn btn-danger">Delete All</button>
+            </div>
+        </div>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Action</th>
+                <th id="total-amount"></th>
+            </tr>
+        </thead>
+        <tbody id="expense-list"></tbody>
+    </table>
+
+    <button onclick="logOut()" class="logout btn btn-primary" >Log Out</button>
+ </div>
+
+
+    
+ 
+
+
+
+
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
